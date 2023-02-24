@@ -1,8 +1,7 @@
 # CMアプリアルバム
-アプリ側<br>
 https://github.com/HaradaAkira32/2023sotusei
 
-# sotuseiapp
+## sotuseiapp
 CMアプリアルバム<br>
 データベース
 
