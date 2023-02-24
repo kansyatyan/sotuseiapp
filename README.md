@@ -2,7 +2,7 @@
 https://github.com/HaradaAkira32/2023sotusei
 
 # sotuseiapp
-CMアプリアルバム
+CMアプリアルバム<br>
 データベース
 
 ## 開発言語・環境
