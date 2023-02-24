@@ -10,6 +10,6 @@ CMアプリアルバム<br>
 ・サーバー:ロリポップ<br>
 ・データベース:MySQL<br>
 ・データベースバージョン:5.7.36<br>
-・ツール：phpMyAdmin
+・ツール:phpMyAdmin
 
 
