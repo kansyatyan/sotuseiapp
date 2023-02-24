@@ -2,4 +2,4 @@
 
 CMアプリアルバム
 
-usedatabase:ロリポップ
+use database:ロリポップ
