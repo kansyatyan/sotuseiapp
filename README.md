@@ -9,7 +9,7 @@ CMアプリアルバム<br>
 ・サーバーバージョン:5.7.36<br>
 ・データベース:MySQL<br>
 ・ツール:phpMyAdmin<br>
-・バージョン:version 4.0.10.18
+・バージョン:4.0.10.18
 
 ## CMアプリアルバム
 https://github.com/HaradaAkira32/2023sotusei
