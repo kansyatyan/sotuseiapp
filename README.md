@@ -1,7 +1,4 @@
-# CMアプリアルバム
-https://github.com/HaradaAkira32/2023sotusei
-
-## sotuseiapp
+# sotuseiapp
 CMアプリアルバム<br>
 データベース
 
@@ -11,5 +8,8 @@ CMアプリアルバム<br>
 ・データベース:MySQL<br>
 ・データベースバージョン:5.7.36<br>
 ・ツール:phpMyAdmin
+
+## CMアプリアルバム
+https://github.com/HaradaAkira32/2023sotusei
 
 
