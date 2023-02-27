@@ -10,7 +10,8 @@ if(isset($_GET["year"])) {
     $year = $_GET["year"];
     if(isset($_GET["event"])) {
         $event = $_GET["event"];
-        $sth = $dbh->prepare("SELECT * FROM app where year = '$year' AND event_id = $event");
+        $sth = $dbh->prepare("SELECT * FROM app where year = '$year' AND event_id = $event
+                                JOIN student s ON a.app_id = s.app_id");
     } else {
         $sth = $dbh->prepare("SELECT * FROM app where year = '$year'");
     }
@@ -23,7 +24,7 @@ $userData = array();
 while($row = $sth->fetch(PDO::FETCH_ASSOC)){
     $userData[]=array(
     'id'=>$row['app_id'],
-    'student_name'=>$row['student_name'],
+    'student_name'=>getStudents($row['student_id']),
     'title'=>$row['app_title'],
     'icon'=>$row['app_icon'],
     'year'=>$row['year'],
@@ -40,6 +41,17 @@ function getTags($id) {
     $show = [];
     while($row = $tags->fetch(PDO::FETCH_ASSOC)){
         $show[] = $row['tag_name'];
+    }
+    return $show;
+}
+
+function getStudents($id) {
+    $dbh = connectDb();
+    $stu = $dbh->prepare("SELECT * FROM app JOIN student USING(student_id) where student_id = '$id'");
+    $stu->execute();
+    $show = [];
+    while($row = $stu->fetch(PDO::FETCH_ASSOC)){
+        $show[] = $row['student_name'];
     }
     return $show;
 }
