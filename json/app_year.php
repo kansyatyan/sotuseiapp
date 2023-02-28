@@ -10,8 +10,9 @@ if(isset($_GET["year"])) {
     $year = $_GET["year"];
     if(isset($_GET["event"])) {
         $event = $_GET["event"];
-        $sth = $dbh->prepare("SELECT * FROM app where year = '$year' AND event_id = $event
-                                JOIN student s ON a.app_id = s.app_id");
+        $sth = $dbh->prepare("SELECT * FROM app a
+                                JOIN app_student s ON a.app_id = s.app_id
+								 where year = '$year' AND event_id = $event");
     } else {
         $sth = $dbh->prepare("SELECT * FROM app where year = '$year'");
     }
@@ -60,4 +61,3 @@ header('Content-type: application/json');
 echo json_encode($userData,JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
 
 ?>
-
